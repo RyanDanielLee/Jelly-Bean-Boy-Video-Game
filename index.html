@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Final Project</title>
+
+   <style>
+       
+       body {
+           margin: 0;
+           height: 100vh;
+           background: linear-gradient(#333, white) no-repeat;
+        }
+
+        #startScreen {
+            margin: auto;
+            margin-top: 50px;
+            position: relative;
+            width: 300px;
+            height: 220px;
+            background-color: whitesmoke;
+            color: #333;
+            text-align: center;
+            border: 8px solid;
+            border-radius: 10px;
+            box-shadow: 0 1px 32px white;
+            transform: rotate(0) scale(0);
+            animation: twirl 1s linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes twirl {
+            100% {
+                transform: rotate(1080deg) scale(1);
+            }
+        }
+
+        #startScreen div {
+            height: 50%;
+        }
+        
+        #startScreen h1 {
+            position:absolute;
+            width: 100%;
+            color: #222;
+            font-size: 40px;
+            text-shadow: 0 1px 2px;
+            animation: fade 6s linear infinite;
+        }
+        
+        @keyframes fade {
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        #startScreen p {
+            font-weight: bold;
+        }
+        
+        
+   </style>
+
+   <script src="index.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+        <div id="startScreen">
+            <div>
+                <h1>Jellybean Boy</h1>
+        </div>
+        <div>
+          <p><b>Rules: <br>
+            Must play in full screen (f11 &rarr; f5) <br>
+            NO double jumping<br>
+            Scroll to bottom (&darr;) to start
+          </p>
+        </div>
+      </div>
+
+        <canvas id="myCanvas"></canvas>
+</body>
+</html>
